@@ -1,0 +1,145 @@
+<!-- ====================================================================
+Project:  Portfolio Filter Gallery
+Author:  Lone Mortensen
+Description:  The Portfolio Filter Gallery displays select web projects. The 
+portfolio is filterable so users can select the type of projects 
+they want to see by clicking on buttons representing coding languages. The 
+filter will show only the projects built with the language selected by the user. 
+Built with: JavaScript, HTML5, CSS3, and Flexbox.
+
+===== *** =====
+
+==================================================================== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Filter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alata&family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Alata&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--PROJECTS-->
+    <main id="projects">
+        <div class="content-wrapper">
+          <div class="title">
+            <h1 class="main-title">Portfolio Filter Gallery</h1>
+            <hr class="title-line"/>
+            <h2 class="subtitle">My Projects</h2>
+          </div>
+          <!--portfolio filter buttons-->
+          <div class="buttons-position">
+            <div class="language-button-wrapper buttons-align"></div> 
+          </div>  
+          
+          <!--portfolio projects-->
+          <div class="project-wrapper">
+            <article class="project-item" data-language="All">
+              <figure>
+                <div class="project-color-green">
+                  <h2 class="project-title project-font-purple">&#35;1</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;1</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> HTML, CSS, Flexbox, Responsive web development</p>
+              </div>
+            </article>
+  
+            <article class="project-item" data-language="All, JavaScript, Python">
+              <figure>
+                <div class="project-color-purple">
+                  <h2 class="project-title project-font-lilac">&#35;2</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;2</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> React JS, JSX, Components, Python</p>
+              </div>
+            </article>
+  
+            <article class="project-item" data-language="All, JavaScript, Ruby">
+              <figure>
+                <div class="project-color-grey">
+                  <h2 class="project-title project-font-green">&#35;3</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;3</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> JavaScript, Ruby</p>
+              </div>
+            </article>
+  
+            <article class="project-item" data-language="All, JavaScript, Ruby">
+              <figure>
+                <div class="project-color-purple">
+                  <h2 class="project-title project-font-lilac">&#35;4</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;4</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> React JS, JSX, Components, Ruby</p>
+              </div>
+            </article>
+  
+            <article class="project-item" data-language="All, JavaScript, Python">
+              <figure>
+                <div class="project-color-grey">
+                  <h2 class="project-title project-font-green">&#35;5</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;5</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> JavaScript, Python</p>
+              </div>
+            </article>
+
+            <article class="project-item" data-language="All">
+              <figure>
+                <div class="project-color-green">
+                  <h2 class="project-title project-font-purple">&#35;6</h2>
+                </div>
+              </figure>
+              <hr class="project-line"/>
+              <div class="project-header">
+                <h4>Project &#35;6</h4>
+              </div>
+              <p class="project-description"><span>Description:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <div class="project-skills">
+                <p><span>Built With:</span> HTML, CSS, Flexbox, Responsive web development</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </main>
+
+    <!--JavaScript-->
+	  <script src="js/script.js"></script>
+  </body>
+</html>
