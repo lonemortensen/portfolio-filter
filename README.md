@@ -11,7 +11,9 @@ Users can filter the portfolio gallery by:
 - **Python** - incl. libraries and frameworks
 - **Ruby** - incl. libraries and frameworks
 
+
 ![Portfolio Filter Gallery](img/portfolio-filter-screenShot.png)
+
 
 ## Project Background
 This was a personal project I designed and built from scratch with vanilla JavaScript. With the Portfolio Filter Gallery, I set out to practice my analytical skills by breaking down an idea into components, understanding what each component should do, and how the data will need to flow between the components to create the desired functionality. 
@@ -32,9 +34,7 @@ The code for the filter is based on the Model-View-Controller design pattern:
 
 - The View creates and displays the HTML filter buttons that reflect the languages represented in the projects and displays portfolio projects on the front end. The View adds an event listener to each HTML button it renders in the DOM. Later, it applies the appropriate CSS to ensure that only projects that match the user's selection are displayed. When the page (re)loads or when the user clicks a filter button, the View is called by the Controller that passes data - i.e. the languages used in the projects and which projects the user wants to see, respectively - for the View to render. 
 
-- The Controller retrieves and processes data from the Model before passing on the data to the View for display. When a page (re)load is detected by an event listener on the Window, the Controller's event handler calls the Model and retrieves and passes to the View the languages stored in the Model's object. The View uses the language data to create and display the filter buttons. 
-
-The Controller also listens for events triggered by the user clicking the language filter buttons. An event handler retrieves the language label from the button that was clicked, filters through the Model's object to find projects that match the selected language, and hands the data to the View which highlights the selected language button and ensures that only these particular projects are displayed.     
+- The Controller retrieves and processes data from the Model before passing on the data to the View for display. When a page (re)load is detected by an event listener on the Window, the Controller's event handler calls the Model and retrieves and passes to the View the languages stored in the Model's object. The View uses the language data to create and display the filter buttons. The Controller also listens for events triggered by the user clicking the language filter buttons. An event handler retrieves the language label from the button that was clicked, filters through the Model's object to find projects that match the selected language, and hands the data to the View which highlights the selected language button and ensures that only these particular projects are displayed.     
 
 ## Built With 
 - JavaScript
@@ -43,5 +43,5 @@ The Controller also listens for events triggered by the user clicking the langua
 - Flexbox
 
 ## Launch
-[See the live version of the Portfolio Filter Gallery here.]()
+[See the live version of the Portfolio Filter Gallery here.](https://lonemortensen.github.io/portfolio-filter/)
 
