@@ -1,8 +1,8 @@
 # Portfolio Filter Gallery
-In the Portfolio Filter Gallery, users click on filter buttons to see select web projects. The filters represent coding languages used in the projects. Built with vanilla JavaScript, HTML5, CSS3, and Flexbox.
+In the Portfolio Filter Gallery, users click on filter buttons to choose which web projects to view. The buttons represent coding languages used in the projects. Built with vanilla JavaScript, HTML5, CSS3, and Flexbox.
 
 ## About
-The Portfolio Filter Gallery showcases web projects. The gallery is filterable so users can select the type of projects they want to see by clicking on buttons representing coding languages used in the projects. The filter will show only the projects built with the language selected by the user. 
+The Portfolio Filter Gallery showcases web development projects. The gallery is filterable so users can select the type of projects they want to see by clicking on buttons representing coding languages used in the projects. The filter will ensure that only projects built with the language selected by the user are displayed.
 
 Users can filter the portfolio gallery by: 
 
@@ -16,25 +16,27 @@ Users can filter the portfolio gallery by:
 
 
 ## Project Background
-This was a personal project I designed and built from scratch with vanilla JavaScript. With the Portfolio Filter Gallery, I set out to practice my analytical skills by breaking down an idea into components, understanding what each component should do, and how the data will need to flow between the components to create the desired functionality. 
+This was a personal project I designed and built. My main motivation for building this project was to practice:
 
-My goal was to create a dynamic filtering product that could easily adapt to a changing web project portfolio while limiting the number of places I would need to update the filter code to reflect the changes made. To that end, I enjoyed the challenge of figuring out how to access and process data for the filter buttons without hard-coding too much of the data. This project deepened by understanding of how to work with data stored in an object and allowed me to experiment with strategies for processing that data.
+- how to break down an idea into components, 
+- understand what each component should do, and 
+- how the data would need to flow between the components to create the desired functionality.
 
-I also gained a better understanding of the Model-View-Controller pattern which I applied to help organize the code and better separate and allocate tasks to the relevant components. 
+The result is the Portfolio Filter Gallery which is a filtering product that easily adapts to a changing portfolio and responds to user actions. It uses data attributes to store custom data on HTML elements and JavaScript to access and utilize the data to create filter buttons and update the user interface to reflect the user’s selection.  
 
-**Functionality:** 
-The Portfolio Gallery Filter is built with scalability in mind. - Each portfolio project contains an HTML data attribute that indicates the main languages used for creating the project. The script uses the HTML data attribute values to automatically create and display the filter buttons. This ensures that the portfolio gallery is dynamic and scalable: The filter automatically adapts to changes in the portfolio and only creates and displays filter buttons for the languages indicated in the portfolio elements' data attributes at any given time. 
+Main features of the Portfolio Filter Gallery:
 
-When adding languages to or removing languages from the portfolio, only the HTML file needs updating. If new - or existing - projects introduce a new language in the HTML file, a new corresponding button is automatically created and displayed by the script. Conversely, if a language is removed entirely from the portfolio, the script will no longer create and display the corresponding filter button.  
+- The gallery uses HTML data attributes to store custom information associated with each portfolio project. The HTML data attribute assigned to each project indicates the main coding languages used for building the project.
 
-**Design:** 
-The code for the filter is based on the Model-View-Controller design pattern: 
+- The script uses JavaScript to access the HTML data attribute values (languages) through the dataset property. The script collects and utilizes the information from the data attributes to create and display filter buttons based on the languages used in the portfolio projects at any given time.  
 
-- The filter's Model loops through the portfolio projects every time the page (re)loads and every time the user makes a selection. As such, the Model will always reflect the languages represented in the portfolio at any given time. In the loop, the Model collects the HTML data attribute values (i.e. the languages used in the projects), pairs them with their associated portfolio projects, and stores the data as key-value pairs in an object. 
+- The filter and its buttons automatically adapt to changes in the gallery’s HTML. For example, if new (or existing) projects introduce a new language, a new corresponding button is automatically created and displayed by the script.
 
-- The View creates and displays the HTML filter buttons that reflect the languages represented in the projects and displays portfolio projects on the front end. The View adds an event listener to each HTML button it renders in the DOM. Later, it applies the appropriate CSS to ensure that only projects that match the user's selection are displayed. When the page (re)loads or when the user clicks a filter button, the View is called by the Controller that passes data - i.e. the languages used in the projects and which projects the user wants to see, respectively - for the View to render. 
+- Along with the data attribute values (languages), the script also stores a reference to every project that uses each of the languages. Each language and its associated projects are stored as a key-value pair in a ‘project data’ object. 
 
-- The Controller retrieves and processes data from the Model before passing on the data to the View for display. When a page (re)load is detected by an event listener on the Window, the Controller's event handler calls the Model and retrieves and passes to the View the languages stored in the Model's object. The View uses the language data to create and display the filter buttons. The Controller also listens for events triggered by the user clicking the language filter buttons. An event handler retrieves the language label from the button that was clicked, filters through the Model's object to find projects that match the selected language, and hands the data to the View which highlights the selected language button and ensures that only these particular projects are displayed.     
+- When the user selects and clicks on a language filter button, the script retrieves data from the innerText property via the event object and filters through the project data object to find and display portfolio projects that match the user’s selection and update the user interface accordingly.  
+
+- The Portfolio Filter Gallery’s script applies the Model-View-Controller pattern to organize the script and to separate and execute tasks. 
 
 ## Built With 
 - JavaScript
