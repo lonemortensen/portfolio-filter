@@ -152,6 +152,7 @@ p {
 /* START: Language filter buttons styling applied 
 to the button element in JavaScript: */
 .buttons-style {
+  margin: 10px 5px 0px 5px;
   padding: 5px 10px;
   font-size: 0.75rem;
   text-transform: uppercase;
